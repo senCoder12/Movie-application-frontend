@@ -1,0 +1,33 @@
+.skeleton-loader {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    background-color: rgb(11 11 13);
+    padding: 20px;
+}
+
+.skeleton-item {
+    width: 100%;
+    height: 475px;
+    background-color: #4f4d4d;
+    border-radius: 5px;
+    animation: loading 1s infinite;
+
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}

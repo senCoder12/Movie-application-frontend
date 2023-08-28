@@ -1,0 +1,39 @@
+/* pagination.css */
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-number {
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 50%;
+}
+
+.page-number.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.prev-button,
+.next-button {
+    background-color: #ccc;
+    color: #333;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 9%;
+    background-color: #f1f18b;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #ddd;
+}

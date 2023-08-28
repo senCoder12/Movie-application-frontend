@@ -1,0 +1,129 @@
+/* Header.css */
+
+.header {
+    color: white;
+    padding: 20px 0;
+    background-color: RGB(30, 40, 30);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-component {
+    font-family: Arial, sans-serif;
+    width: inherit;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.header-button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 20px;
+}
+
+.header-button:hover {
+    background-color: #d32f2f;
+}
+
+.logo {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    font-style: italic;
+    color: #3f51b5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(to bottom, #3f51b5, #ffffff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.sidebar-dropdowns-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-dropdowns {
+    margin-bottom: 20px;
+}
+
+.dropdown-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.sidebar-heading {
+    margin-bottom: 40px;
+    font-style: italic;
+}
+
+
+.fav-icon {
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.favorite-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-size: 12px;
+}
+
+/* ... Rest of the CSS ... */
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-button {
+        margin-left: 40px;
+        padding: 40px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-actions {
+        /* flex-direction: column; */
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .header-button {
+        margin-left: 40px;
+        padding: 11px 9px;
+    }
+
+    .search-bar {
+        margin-right: 100px !important;
+    }
+}

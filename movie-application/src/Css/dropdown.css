@@ -1,0 +1,81 @@
+/* Dropdown.css */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 200px; 
+    font-family: Arial, sans-serif;
+    user-select: none;
+}
+
+.dropdown-header {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-header::after {
+    content: '\25BE'; /* Unicode chevron down icon */
+    font-size: 12px;
+    margin-left: 8px;
+    transition: transform 0.3s;
+}
+
+.dropdown.open .dropdown-header::after {
+    transform: rotate(180deg); /* Rotate the chevron icon when dropdown is open */
+}
+
+.dropdown-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* Add a max-height to limit the dropdown height */
+    overflow-y: auto; /* Add vertical scroll if options exceed max-height */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    z-index: 99;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.highlighted {
+    background-color: #007bff; /* Highlight color for selected option */
+    color: #fff; /* Text color for selected option */
+}
+
+/* Scrollbar styles for dropdown list */
+.dropdown-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}

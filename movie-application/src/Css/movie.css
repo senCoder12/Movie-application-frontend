@@ -1,0 +1,92 @@
+
+.movie-grid-parent {
+    background-color: rgb(11 11 13);
+}
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 20px;
+    width: 80%;
+    margin: 0px auto;
+    padding: 20px 0px;
+  }
+  
+  @media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        width: 85%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .movie-grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  
+/* MovieCard.css */
+
+.movie-card {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* height: 80%; */
+  }
+  
+  .movie-image-container {
+    position: relative;
+    height: 100%;
+  }
+  
+  .movie-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-name {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    max-height: 3em; /* Truncate text after 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  
+  .movie-button {
+    background-color: #3f51b5;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+  }
+  
+  .movie-button:hover {
+    background-color: #2c3e50;
+  }
+  
+  .pagination-footer {
+    background-color: #14171a;
+    padding: 20px;
+  }

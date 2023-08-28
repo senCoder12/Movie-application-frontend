@@ -1,0 +1,105 @@
+/* MovieDetails.css */
+
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.single-movie-info {
+    position: absolute;
+    bottom: 276px;
+    right: 484px;
+    width: 39%;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.backdrop-container {
+    position: relative;
+    height: 725px;
+    background-size: cover;
+    background-position: center;
+}
+
+.backdrop-image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.poster-overlay {
+    position: absolute;
+    left: 140px;
+    bottom: 75px;
+    width: 373px;
+    height: 521px;
+    border-radius: 10px;
+}
+
+.poster-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.movie-title {
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.movie-overview {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.release-date,
+.vote-average {
+    font-size: 18px;
+    margin: 0;
+    color: #f9f325;
+}
+
+.movie-genre-details {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.fixed-button {
+    background-color: red;
+    padding: 3px 10px;
+    margin-right: 20px;
+    font-size: 12px;
+    cursor: default;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .backdrop-container {
+        height: 200px;
+    }
+    
+    .poster-overlay {
+        width: 100px;
+        height: 150px;
+    }
+    
+    .movie-title {
+        font-size: 20px;
+    }
+    
+    .movie-overview,
+    .release-date,
+    .vote-average {
+        font-size: 12px;
+    }
+}
