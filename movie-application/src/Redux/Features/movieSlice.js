@@ -11,9 +11,9 @@ export const createMovie = createAsyncThunk("movie/create", async({movieInfo, na
     }
 })
 
-export const getMovies = createAsyncThunk("movie/all", async (page, {rejectWithValue})=> {
+export const getMovies = createAsyncThunk("movie/all", async ({page, query}, {rejectWithValue})=> {
     try {
-        const response = await api.getAllMovies(page);
+        const response = await api.getAllMovies(page, query);
         return response.data;
     } catch (error) {
         return rejectWithValue(error.response.data);
@@ -70,6 +70,7 @@ const movieSlice = createSlice({
         noOfPages: 1,
         totalMovies: 0,
         error: "",
+        query: {},
         loading: false
     },
     reducers: {
@@ -84,6 +85,9 @@ const movieSlice = createSlice({
             if(id) {
                 state.favMovies = state.favMovies.filter((item)=> item._id !== id);
             }
+        },
+        setQueryParams: (state, action) => {
+            state.query = action.payload;
         }
     },
     extraReducers: {
@@ -156,5 +160,5 @@ const movieSlice = createSlice({
     }
 })
 
-export const {setCurrentPage, setFavMovies, deleteMovieFromFav} = movieSlice.actions;
+export const {setCurrentPage, setFavMovies, deleteMovieFromFav, setQueryParams} = movieSlice.actions;
 export default movieSlice.reducer;

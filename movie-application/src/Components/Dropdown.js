@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import '../Css/dropdown.css'; // You can style the component in this CSS file
+import '../Css/dropdown.css'; 
 
 const Dropdown = ({ options, onSelect }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +11,8 @@ const Dropdown = ({ options, onSelect }) => {
         setIsOpen(!isOpen);
     };
 
-    const handleOptionClick = (option) => {
-        setSelectedOption(option);
+    const handleOptionClick = (name, option) => {
+        setSelectedOption(name);
         onSelect(option);
         toggleDropdown();
     };
@@ -60,14 +60,14 @@ const Dropdown = ({ options, onSelect }) => {
                 <ul className="dropdown-list">
                     {options.map((option, index) => (
                         <li
-                            key={option}
+                            key={option.id}
                             className={`dropdown-item ${
                                 (highlightedIndex === index) ? 'highlighted' : ''
                             }`}
-                            onClick={() => handleOptionClick(option)}
+                            onClick={() => handleOptionClick(option.name, option)}
                             onMouseEnter={() => setHighlightedIndex(index)} // Highlight on hover
                         >
-                            {option}
+                            {option.name}
                         </li>
                     ))}
                 </ul>

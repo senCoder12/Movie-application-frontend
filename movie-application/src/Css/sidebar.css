@@ -4,12 +4,9 @@
     position: fixed;
     top: 0;
     right: -300px;
-    /* Change left to right */
     background-color: #eee8e8;
     transition: right 0.3s ease-in-out;
-    /* Change left to right */
     box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
-    /* Adjust box-shadow direction */
     padding: 20px;
     box-sizing: border-box;
     z-index: 9999;

@@ -1,0 +1,25 @@
+.empty-fav-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #1f1f1f; 
+    color: #ffffff;
+}
+
+.empty-fav-content {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .empty-fav-content {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Styles for phones */
+    .empty-fav-content {
+        padding: 10px;
+    }
+}

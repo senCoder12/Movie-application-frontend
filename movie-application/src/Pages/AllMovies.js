@@ -8,15 +8,15 @@ import Pagination from '../Components/Pagination';
 import SkeletonLoader from '../Components/SkeletonLoader';
 
 function AllMovies() {
-    const { movies, loading, currentPage, noOfPages } = useSelector((state) => ({ ...state.movie }));
+    const { movies, loading, currentPage, noOfPages, query } = useSelector((state) => ({ ...state.movie }));
     const dispatch = useDispatch();
 
     const onPageChange = (page) => {
-        dispatch(getMovies(page));
+        dispatch(getMovies({page, query}));
     }
 
     useEffect(() => {
-        dispatch(getMovies(currentPage));
+        dispatch(getMovies({page: currentPage, query}));
     }, [currentPage])
 
     return (
@@ -29,7 +29,6 @@ function AllMovies() {
                     </div>
                 </>
             }
-            {/* <SkeletonLoader count={6} /> */}
         </div>
     )
 }

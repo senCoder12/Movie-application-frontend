@@ -1,8 +1,8 @@
 import React from 'react';
-import '../Css/pagination.css'; // You can create a separate CSS file for styling
+import '../Css/pagination.css'; 
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-    const visiblePages = 3; // Number of visible pagination buttons
+    const visiblePages = 3; 
     const halfVisible = Math.floor(visiblePages / 2);
 
     const startPage = Math.max(currentPage - halfVisible, 1);

@@ -82,7 +82,6 @@
     cursor: default;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     .backdrop-container {
         height: 200px;

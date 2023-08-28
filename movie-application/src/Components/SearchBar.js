@@ -4,7 +4,7 @@ import '../Css/searchbar.css';
 const SearchBar = ({ data, movieSearchHandler, onItemClick }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const [searchResults, setSearchResults] = useState([]);
-    const [selectedIndex, setSelectedIndex] = useState(0); // Default selection is the first result
+    const [selectedIndex, setSelectedIndex] = useState(0); 
     const searchRef = useRef(null);
     const debounceTimeout = useRef(null);
 

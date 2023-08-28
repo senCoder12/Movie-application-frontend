@@ -21,22 +21,22 @@
 }
 
 .dropdown-header::after {
-    content: '\25BE'; /* Unicode chevron down icon */
+    content: '\25BE'; 
     font-size: 12px;
     margin-left: 8px;
     transition: transform 0.3s;
 }
 
 .dropdown.open .dropdown-header::after {
-    transform: rotate(180deg); /* Rotate the chevron icon when dropdown is open */
+    transform: rotate(180deg); 
 }
 
 .dropdown-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-height: 200px; /* Add a max-height to limit the dropdown height */
-    overflow-y: auto; /* Add vertical scroll if options exceed max-height */
+    max-height: 200px; 
+    overflow-y: auto; 
     position: absolute;
     top: 100%;
     left: 0;
@@ -62,8 +62,8 @@
 }
 
 .highlighted {
-    background-color: #007bff; /* Highlight color for selected option */
-    color: #fff; /* Text color for selected option */
+    background-color: #007bff; 
+    color: #fff; 
 }
 
 /* Scrollbar styles for dropdown list */
